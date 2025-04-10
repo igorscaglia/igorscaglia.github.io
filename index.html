@@ -17,202 +17,284 @@
       margin-bottom: 30px;
     }
     .theme-card {
-      background: #fff;
+      margin-bottom: 40px;
+      border: 1px solid #ddd;
       border-radius: 8px;
-      padding: 20px;
-      margin-bottom: 20px;
+      overflow: hidden;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
-    .theme-card h2 {
+    .theme-info {
+      padding: 20px;
+      background: #fff;
+    }
+    .theme-info h2 {
       margin-top: 0;
     }
-    .section {
-      margin-bottom: 15px;
+    /* Estrutura de preview com aparência de WordPress */
+    .wp-preview {
+      display: grid;
+      grid-template-columns: 1fr 300px;
+      grid-template-rows: auto 1fr auto;
+      gap: 1px;
+      background: #ccc;
     }
-    .section strong {
-      display: block;
-      margin-bottom: 5px;
+    .wp-header, .wp-footer, .wp-sidebar, .wp-content, .wp-preview-inner {
+      padding: 15px;
     }
-    .color-swatch {
-      display: inline-block;
-      width: 20px;
-      height: 20px;
-      border-radius: 4px;
-      margin-right: 8px;
-      vertical-align: middle;
-    }
-    .colors-list li {
-      list-style: none;
-      margin-bottom: 5px;
-    }
-    footer {
+    .wp-header {
+      grid-column: 1 / -1;
       text-align: center;
-      margin-top: 40px;
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+    .wp-footer {
+      grid-column: 1 / -1;
+      text-align: center;
       font-size: 0.9em;
-      color: #777;
+    }
+    .wp-content {
+      background-color: #fff;
+    }
+    .wp-sidebar {
+      background-color: #fff;
+      font-size: 0.9em;
+    }
+    .wp-content article.post {
+      margin-bottom: 15px;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 10px;
+    }
+    .wp-content article.post:last-child {
+      margin-bottom: 0;
+      border-bottom: none;
     }
   </style>
 </head>
 <body>
   <h1>Catálogo de Temas para Igor Scaglia</h1>
   
-  <!-- Esquema #1 -->
+  <!-- Esquema #1: Aurora Digital -->
   <div class="theme-card">
-    <h2>Aurora Digital</h2>
-    <div class="section">
-      <strong>Paleta de Cores:</strong>
-      <ul class="colors-list">
-        <li><span class="color-swatch" style="background-color: #A3D5D3;"></span> <code>#A3D5D3</code> – Azul marinho suave para transmitir frescor.</li>
-        <li><span class="color-swatch" style="background-color: #F7E8AA;"></span> <code>#F7E8AA</code> – Amarelo pálido que lembra o nascer do sol, sem gritar “alerta!”</li>
-        <li><span class="color-swatch" style="background-color: #D9BF77;"></span> <code>#D9BF77</code> – Toque de dourado discreto que remete à sofisticação sutil.</li>
-      </ul>
+    <div class="wp-preview" style="
+         /* Aplicando a paleta do tema Aurora Digital */
+         --header-bg: #A3D5D3;
+         --content-bg: #F7E8AA;
+         --sidebar-bg: #D9BF77;
+         font-family: 'Montserrat', sans-serif;">
+      <div class="wp-header" style="background-color: var(--header-bg); color: #333;">
+        Aurora Digital
+      </div>
+      <div class="wp-content" style="background-color: var(--content-bg); font-family: 'Open Sans', sans-serif; grid-column: 1 / 2;">
+        <article class="post">
+          <h3 style="font-family: 'Montserrat', sans-serif;">Post Exemplo 1</h3>
+          <p>Conteúdo legível e organizado, sem estresse para os olhos – ideal para mentes que codificam e inspiram.</p>
+        </article>
+        <article class="post">
+          <h3 style="font-family: 'Montserrat', sans-serif;">Post Exemplo 2</h3>
+          <p>Informações dispostas para facilitar a leitura prolongada, sem aquela agressividade visual que cansa.</p>
+        </article>
+      </div>
+      <div class="wp-sidebar" style="background-color: var(--sidebar-bg); font-family: 'Lato', sans-serif; grid-column: 2 / 3;">
+        <h4>Sidebar</h4>
+        <ul style="list-style: none; padding: 0;">
+          <li><a href="#" style="color: inherit; text-decoration: none;">Link 1</a></li>
+          <li><a href="#" style="color: inherit; text-decoration: none;">Link 2</a></li>
+          <li><a href="#" style="color: inherit; text-decoration: none;">Link 3</a></li>
+        </ul>
+      </div>
+      <div class="wp-footer" style="background-color: var(--header-bg); color: #333;">
+        Footer: Navegação discreta e moderna
+      </div>
     </div>
-    <div class="section">
-      <strong>Fontes Sugeridas:</strong>
-      <p><em>Título:</em> Montserrat Bold<br>
-         <em>Subtítulo:</em> Lato Semi-Bold<br>
-         <em>Texto Corrido:</em> Open Sans Regular</p>
-    </div>
-    <div class="section">
-      <strong>Influência Artística:</strong>
-      <p>Futurismo Pastel – pense numa visão otimista do amanhã, sem o exagero neon.</p>
-    </div>
-    <div class="section">
-      <strong>Por que poupa os olhos:</strong>
-      <p>As cores se harmonizam com delicadeza, evitando o cansaço visual mesmo em longas sessões de leitura – ideal para quem prefere conforto sem barulho.</p>
-    </div>
-    <div class="section">
-      <strong>Observações / Regras Principais:</strong>
-      <p>Transmitir modernidade sem perder o toque calmo e convidativo. Um design que faz o professor parecer futurista e sofisticado, sem estourar os limites da elegância.</p>
+    <div class="theme-info">
+      <h2>Aurora Digital</h2>
+      <p><strong>Paleta de Cores:</strong> #A3D5D3, #F7E8AA, #D9BF77</p>
+      <p><strong>Fontes Sugeridas:</strong><br>
+         Título: Montserrat Bold, Subtítulo: Lato Semi-Bold, Texto Corrido: Open Sans Regular</p>
+      <p><strong>Influência Artística:</strong> Futurismo Pastel</p>
+      <p><strong>Por que poupa os olhos:</strong> A harmonia sutil entre os tons evita cansaço visual, mesmo em longas sessões de leitura.</p>
+      <p><strong>Observações / Regras:</strong> Modernidade e sofisticação sem exageros.</p>
     </div>
   </div>
   
-  <!-- Esquema #2 -->
+  <!-- Esquema #2: Retro Circuit -->
   <div class="theme-card">
-    <h2>Retro Circuit</h2>
-    <div class="section">
-      <strong>Paleta de Cores:</strong>
-      <ul class="colors-list">
-        <li><span class="color-swatch" style="background-color: #B0C4B1;"></span> <code>#B0C4B1</code> – Verde menta moderno, sutil, mas que não dorme no ponto.</li>
-        <li><span class="color-swatch" style="background-color: #F5E1A4;"></span> <code>#F5E1A4</code> – Amarelo creme, trazendo uma pitada de nostalgia sem exageros.</li>
-        <li><span class="color-swatch" style="background-color: #CEB8A8;"></span> <code>#CEB8A8</code> – Bege suavemente acastanhado, para não lembrar um papel de parede dos anos 70.</li>
-      </ul>
+    <div class="wp-preview" style="
+         /* Paleta do Retro Circuit */
+         --header-bg: #B0C4B1;
+         --content-bg: #F5E1A4;
+         --sidebar-bg: #CEB8A8;
+         font-family: 'Raleway', sans-serif;">
+      <div class="wp-header" style="background-color: var(--header-bg); color: #333;">
+        Retro Circuit
+      </div>
+      <div class="wp-content" style="background-color: var(--content-bg); font-family: 'Nunito Sans', sans-serif; grid-column: 1 / 2;">
+        <article class="post">
+          <h3 style="font-family: 'Raleway', sans-serif;">Post Exemplo A</h3>
+          <p>Layout inspirado na Bauhaus Vintage: simplicidade geométrica sem aborrecimentos visuais.</p>
+        </article>
+        <article class="post">
+          <h3 style="font-family: 'Raleway', sans-serif;">Post Exemplo B</h3>
+          <p>Confortável, nostálgico e organizado para proporcionar uma experiência de leitura fluida.</p>
+        </article>
+      </div>
+      <div class="wp-sidebar" style="background-color: var(--sidebar-bg); font-family: 'Roboto', sans-serif; grid-column: 2 / 3;">
+        <h4>Sidebar</h4>
+        <ul style="list-style: none; padding: 0;">
+          <li><a href="#" style="color: inherit; text-decoration: none;">Menu 1</a></li>
+          <li><a href="#" style="color: inherit; text-decoration: none;">Menu 2</a></li>
+          <li><a href="#" style="color: inherit; text-decoration: none;">Menu 3</a></li>
+        </ul>
+      </div>
+      <div class="wp-footer" style="background-color: var(--header-bg); color: #333;">
+        Footer: Equilíbrio entre o retrô e o moderno
+      </div>
     </div>
-    <div class="section">
-      <strong>Fontes Sugeridas:</strong>
-      <p><em>Título:</em> Raleway ExtraBold<br>
-         <em>Subtítulo:</em> Roboto Medium<br>
-         <em>Texto Corrido:</em> Nunito Sans Regular</p>
-    </div>
-    <div class="section">
-      <strong>Influência Artística:</strong>
-      <p>Bauhaus Vintage – geometria e clareza, sem o tédio de uma exposição de museu.</p>
-    </div>
-    <div class="section">
-      <strong>Por que poupa os olhos:</strong>
-      <p>A combinação de cores cria um ambiente visualmente confortável, permitindo que a leitura flua sem competir com elementos muito chamativos.</p>
-    </div>
-    <div class="section">
-      <strong>Observações / Regras Principais:</strong>
-      <p>Equilíbrio entre o retrô e o moderno, atendendo tanto a mentes engenhosas quanto a corações nostálgicos.</p>
+    <div class="theme-info">
+      <h2>Retro Circuit</h2>
+      <p><strong>Paleta de Cores:</strong> #B0C4B1, #F5E1A4, #CEB8A8</p>
+      <p><strong>Fontes Sugeridas:</strong><br>
+         Título: Raleway ExtraBold, Subtítulo: Roboto Medium, Texto Corrido: Nunito Sans Regular</p>
+      <p><strong>Influência Artística:</strong> Bauhaus Vintage</p>
+      <p><strong>Por que poupa os olhos:</strong> O equilíbrio de tons suaves facilita a leitura, mantendo um clima nostálgico sem exageros.</p>
+      <p><strong>Observações / Regras:</strong> Cuidado para não exagerar no retrô nem no ultra moderno – equilíbrio é tudo.</p>
     </div>
   </div>
   
-  <!-- Esquema #3 -->
+  <!-- Esquema #3: Neon Poético -->
   <div class="theme-card">
-    <h2>Neon Poético</h2>
-    <div class="section">
-      <strong>Paleta de Cores:</strong>
-      <ul class="colors-list">
-        <li><span class="color-swatch" style="background-color: #E3DFFD;"></span> <code>#E3DFFD</code> – Lavanda suave que inspira calma e criatividade.</li>
-        <li><span class="color-swatch" style="background-color: #FDE2E4;"></span> <code>#FDE2E4</code> – Rosa pastel, tão delicado quanto uma poesia numa tarde tranquila.</li>
-        <li><span class="color-swatch" style="background-color: #C1E1DC;"></span> <code>#C1E1DC</code> – Verde água refrescante que completa a vibe sonhadora.</li>
-      </ul>
+    <div class="wp-preview" style="
+         /* Paleta do Neon Poético */
+         --header-bg: #E3DFFD;
+         --content-bg: #FDE2E4;
+         --sidebar-bg: #C1E1DC;
+         font-family: 'Poppins', sans-serif;">
+      <div class="wp-header" style="background-color: var(--header-bg); color: #333;">
+        Neon Poético
+      </div>
+      <div class="wp-content" style="background-color: var(--content-bg); font-family: 'Source Sans Pro', sans-serif; grid-column: 1 / 2;">
+        <article class="post">
+          <h3 style="font-family: 'Poppins', sans-serif;">Post Sonhador 1</h3>
+          <p>Um design que mistura elegância e lirismo, mantendo a clareza sem encher os olhos de neón.</p>
+        </article>
+        <article class="post">
+          <h3 style="font-family: 'Poppins', sans-serif;">Post Sonhador 2</h3>
+          <p>Ideal para leitores que buscam inspiração e tranquilidade em cada parágrafo.</p>
+        </article>
+      </div>
+      <div class="wp-sidebar" style="background-color: var(--sidebar-bg); font-family: 'Poppins', sans-serif; grid-column: 2 / 3;">
+        <h4>Sidebar</h4>
+        <ul style="list-style: none; padding: 0;">
+          <li><a href="#" style="color: inherit; text-decoration: none;">Inspiração</a></li>
+          <li><a href="#" style="color: inherit; text-decoration: none;">Contato</a></li>
+          <li><a href="#" style="color: inherit; text-decoration: none;">Sobre</a></li>
+        </ul>
+      </div>
+      <div class="wp-footer" style="background-color: var(--header-bg); color: #333;">
+        Footer: Elegância que não cansa
+      </div>
     </div>
-    <div class="section">
-      <strong>Fontes Sugeridas:</strong>
-      <p><em>Título:</em> Poppins Bold<br>
-         <em>Subtítulo:</em> Poppins Semi-Bold<br>
-         <em>Texto Corrido:</em> Source Sans Pro Regular</p>
-    </div>
-    <div class="section">
-      <strong>Influência Artística:</strong>
-      <p>Art Nouveau Contemporâneo – elegância com formas orgânicas sem parecer um conto de fadas digital exagerado.</p>
-    </div>
-    <div class="section">
-      <strong>Por que poupa os olhos:</strong>
-      <p>Tonalidades pastéis que evitam o cansaço visual, estabelecendo um fundo leve que destaca o conteúdo.</p>
-    </div>
-    <div class="section">
-      <strong>Observações / Regras Principais:</strong>
-      <p>Clareza e delicadeza para reforçar a identidade futurista do Igor, sem cair em excessos idealistas.</p>
+    <div class="theme-info">
+      <h2>Neon Poético</h2>
+      <p><strong>Paleta de Cores:</strong> #E3DFFD, #FDE2E4, #C1E1DC</p>
+      <p><strong>Fontes Sugeridas:</strong><br>
+         Título e Subtítulo: Poppins Bold / Semi-Bold, Texto Corrido: Source Sans Pro Regular</p>
+      <p><strong>Influência Artística:</strong> Art Nouveau Contemporâneo</p>
+      <p><strong>Por que poupa os olhos:</strong> Pastéis que proporcionam um fundo leve, dando primazia ao conteúdo sem causar fadiga visual.</p>
+      <p><strong>Observações / Regras:</strong> Cuidado para manter o equilíbrio entre o sonhador e o prático.</p>
     </div>
   </div>
   
-  <!-- Esquema #4 -->
+  <!-- Esquema #4: Sutileza Analógica -->
   <div class="theme-card">
-    <h2>Sutileza Analógica</h2>
-    <div class="section">
-      <strong>Paleta de Cores:</strong>
-      <ul class="colors-list">
-        <li><span class="color-swatch" style="background-color: #DDE0C8;"></span> <code>#DDE0C8</code> – Verde oliva suave com um toque orgânico, sem parecer rural demais.</li>
-        <li><span class="color-swatch" style="background-color: #F4F1BB;"></span> <code>#F4F1BB</code> – Amarelo manteiga reconfortante, como um bom café numa manhã de trabalho.</li>
-        <li><span class="color-swatch" style="background-color: #B1A7A6;"></span> <code>#B1A7A6</code> – Cinza topo de linha, garantindo estabilidade sem a frieza do preto tradicional.</li>
-      </ul>
+    <div class="wp-preview" style="
+         /* Paleta do Sutileza Analógica */
+         --header-bg: #DDE0C8;
+         --content-bg: #F4F1BB;
+         --sidebar-bg: #B1A7A6;
+         font-family: 'Merriweather', serif;">
+      <div class="wp-header" style="background-color: var(--header-bg); color: #333;">
+        Sutileza Analógica
+      </div>
+      <div class="wp-content" style="background-color: var(--content-bg); font-family: 'Lora', serif; grid-column: 1 / 2;">
+        <article class="post">
+          <h3 style="font-family: 'Merriweather', serif;">Post Clássico 1</h3>
+          <p>Design impressionista que valoriza a sutileza dos detalhes, para uma leitura sem cansaço.</p>
+        </article>
+        <article class="post">
+          <h3 style="font-family: 'Merriweather', serif;">Post Clássico 2</h3>
+          <p>Com um fundo suave e contrastes bem calculados, tudo se torna mais agradável aos olhos.</p>
+        </article>
+      </div>
+      <div class="wp-sidebar" style="background-color: var(--sidebar-bg); font-family: 'Merriweather Sans', sans-serif; grid-column: 2 / 3;">
+        <h4>Sidebar</h4>
+        <ul style="list-style: none; padding: 0;">
+          <li><a href="#" style="color: inherit; text-decoration: none;">Arquivo</a></li>
+          <li><a href="#" style="color: inherit; text-decoration: none;">Categorias</a></li>
+          <li><a href="#" style="color: inherit; text-decoration: none;">Contatos</a></li>
+        </ul>
+      </div>
+      <div class="wp-footer" style="background-color: var(--header-bg); color: #333;">
+        Footer: Harmonia e equilíbrio
+      </div>
     </div>
-    <div class="section">
-      <strong>Fontes Sugeridas:</strong>
-      <p><em>Título:</em> Merriweather Bold<br>
-         <em>Subtítulo:</em> Merriweather Sans Medium<br>
-         <em>Texto Corrido:</em> Lora Regular</p>
-    </div>
-    <div class="section">
-      <strong>Influência Artística:</strong>
-      <p>Pintura Impressionista – sutileza e leveza dos toques coloridos de Monet, agora no digital.</p>
-    </div>
-    <div class="section">
-      <strong>Por que poupa os olhos:</strong>
-      <p>Contrastes calculados que reduzem a fadiga ocular, perfeito para longas sessões de leitura e codificação.</p>
-    </div>
-    <div class="section">
-      <strong>Observações / Regras Principais:</strong>
-      <p>Um equilíbrio entre tradição e modernidade, agradando a uma audiência heterogênea que valoriza estética e funcionalidade.</p>
+    <div class="theme-info">
+      <h2>Sutileza Analógica</h2>
+      <p><strong>Paleta de Cores:</strong> #DDE0C8, #F4F1BB, #B1A7A6</p>
+      <p><strong>Fontes Sugeridas:</strong><br>
+         Título: Merriweather Bold, Subtítulo: Merriweather Sans Medium, Texto Corrido: Lora Regular</p>
+      <p><strong>Influência Artística:</strong> Pintura Impressionista</p>
+      <p><strong>Por que poupa os olhos:</strong> Combinações pensadas para reduzir a fadiga ocular sem comprometer a legibilidade.</p>
+      <p><strong>Observações / Regras:</strong> Um design que equilibra tradição e modernidade, perfeito para longas leituras.</p>
     </div>
   </div>
   
-  <!-- Esquema #5 -->
+  <!-- Esquema #5: Tech Minimal Chic -->
   <div class="theme-card">
-    <h2>Tech Minimal Chic</h2>
-    <div class="section">
-      <strong>Paleta de Cores:</strong>
-      <ul class="colors-list">
-        <li><span class="color-swatch" style="background-color: #C8D8E4;"></span> <code>#C8D8E4</code> – Azul gelo refrescante que foge do clichê dos dashboards.</li>
-        <li><span class="color-swatch" style="background-color: #EFE6DD;"></span> <code>#EFE6DD</code> – Bege suave, convidativo e longe dos minimalismos frios.</li>
-        <li><span class="color-swatch" style="background-color: #F5C6AA;"></span> <code>#F5C6AA</code> – Pêssego delicado para um toque humano e sofisticado.</li>
-      </ul>
+    <div class="wp-preview" style="
+         /* Paleta do Tech Minimal Chic */
+         --header-bg: #C8D8E4;
+         --content-bg: #EFE6DD;
+         --sidebar-bg: #F5C6AA;
+         font-family: 'Oswald', sans-serif;">
+      <div class="wp-header" style="background-color: var(--header-bg); color: #333;">
+        Tech Minimal Chic
+      </div>
+      <div class="wp-content" style="background-color: var(--content-bg); font-family: 'Muli', sans-serif; grid-column: 1 / 2;">
+        <article class="post">
+          <h3 style="font-family: 'Oswald', sans-serif;">Post Moderno 1</h3>
+          <p>Um layout que alia tecnologia com um toque humano, mantendo a leitura confortável e organizada.</p>
+        </article>
+        <article class="post">
+          <h3 style="font-family: 'Oswald', sans-serif;">Post Moderno 2</h3>
+          <p>Estrutura minimalista com charme para destacar o conteúdo sem cansar a visão.</p>
+        </article>
+      </div>
+      <div class="wp-sidebar" style="background-color: var(--sidebar-bg); font-family: 'PT Sans Narrow', sans-serif; grid-column: 2 / 3;">
+        <h4>Sidebar</h4>
+        <ul style="list-style: none; padding: 0;">
+          <li><a href="#" style="color: inherit; text-decoration: none;">Início</a></li>
+          <li><a href="#" style="color: inherit; text-decoration: none;">Sobre</a></li>
+          <li><a href="#" style="color: inherit; text-decoration: none;">Contato</a></li>
+        </ul>
+      </div>
+      <div class="wp-footer" style="background-color: var(--header-bg); color: #333;">
+        Footer: Minimal, mas com estilo
+      </div>
     </div>
-    <div class="section">
-      <strong>Fontes Sugeridas:</strong>
-      <p><em>Título:</em> Oswald Bold<br>
-         <em>Subtítulo:</em> PT Sans Narrow Semi-Bold<br>
-         <em>Texto Corrido:</em> Muli Regular</p>
-    </div>
-    <div class="section">
-      <strong>Influência Artística:</strong>
-      <p>Modernismo Orgânico – a confluência entre tecnologia e humanidade, longe do padrão “ultra limpo”.</p>
-    </div>
-    <div class="section">
-      <strong>Por que poupa os olhos:</strong>
-      <p>Design pensado para evitar a fadiga visual, permitindo um ambiente tranquilo para absorver conteúdos densos sem aborrecimentos.</p>
-    </div>
-    <div class="section">
-      <strong>Observações / Regras Principais:</strong>
-      <p>Equilíbrio entre rigor técnico e charme estético, posicionando Igor como referência inovadora sem deixar o “code blue” dominar.</p>
+    <div class="theme-info">
+      <h2>Tech Minimal Chic</h2>
+      <p><strong>Paleta de Cores:</strong> #C8D8E4, #EFE6DD, #F5C6AA</p>
+      <p><strong>Fontes Sugeridas:</strong><br>
+         Título: Oswald Bold, Subtítulo: PT Sans Narrow Semi-Bold, Texto Corrido: Muli Regular</p>
+      <p><strong>Influência Artística:</strong> Modernismo Orgânico</p>
+      <p><strong>Por que poupa os olhos:</strong> Design pensado para oferecer conforto visual, permitindo que o conteúdo seja absorvido sem esforço.</p>
+      <p><strong>Observações / Regras:</strong> Combina rigor técnico com uma estética acolhedora e diferenciada.</p>
     </div>
   </div>
   
-  <footer>
-    Catálogo de Temas para Igor Scaglia — Inspiração e conforto para mentes brilhantes com um toque de sarcasmo.
+  <footer style="text-align: center; margin-top: 40px; font-size: 0.9em; color: #777;">
+    Catálogo de Temas para Igor Scaglia — Inspiração e conforto visual com personalidade.
   </footer>
 </body>
 </html>
