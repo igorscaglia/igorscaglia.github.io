@@ -1,300 +1,293 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Catálogo de Temas - Igor Scaglia</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f7f7f7;
-      margin: 0;
-      padding: 20px;
-      color: #333;
-    }
-    h1 {
-      text-align: center;
-      margin-bottom: 30px;
-    }
-    .theme-card {
-      margin-bottom: 40px;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      overflow: hidden;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-    .theme-info {
-      padding: 20px;
-      background: #fff;
-    }
-    .theme-info h2 {
-      margin-top: 0;
-    }
-    /* Estrutura de preview com aparência de WordPress */
-    .wp-preview {
-      display: grid;
-      grid-template-columns: 1fr 300px;
-      grid-template-rows: auto 1fr auto;
-      gap: 1px;
-      background: #ccc;
-    }
-    .wp-header, .wp-footer, .wp-sidebar, .wp-content, .wp-preview-inner {
-      padding: 15px;
-    }
-    .wp-header {
-      grid-column: 1 / -1;
-      text-align: center;
-      font-size: 1.5em;
-      font-weight: bold;
-    }
-    .wp-footer {
-      grid-column: 1 / -1;
-      text-align: center;
-      font-size: 0.9em;
-    }
-    .wp-content {
-      background-color: #fff;
-    }
-    .wp-sidebar {
-      background-color: #fff;
-      font-size: 0.9em;
-    }
-    .wp-content article.post {
-      margin-bottom: 15px;
-      border-bottom: 1px solid #eee;
-      padding-bottom: 10px;
-    }
-    .wp-content article.post:last-child {
-      margin-bottom: 0;
-      border-bottom: none;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Temas Visuais</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Muli&family=Oswald:wght@700&family=PT+Sans+Narrow:wght@700&family=Fira+Code:wght@700&family=Roboto+Condensed:wght@700&family=Source+Sans+Pro&family=Merriweather:wght@700&family=Lato:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Reset Básico e Estilos Globais */
+        body, h1, h2, h3, h4, p, a, button {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            line-height: 1.6;
+        }
+
+        body {
+            font-family: sans-serif; /* Fonte padrão genérica para o corpo fora dos temas */
+            background-color: #f0f0f0; /* Fundo neutro para a página do catálogo */
+            padding-bottom: 30px;
+        }
+
+        .catalog-title {
+            text-align: center;
+            padding: 40px 20px;
+            background-color: #333;
+            color: #fff;
+            margin-bottom: 30px;
+            font-family: 'Lato', sans-serif; /* Usando uma fonte neutra para o título do catálogo */
+        }
+
+        /* Estilos para cada bloco de preview de tema */
+        .theme-preview {
+            max-width: 900px;
+            margin: 0 auto 30px auto; /* Centraliza e adiciona espaço abaixo */
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            overflow: hidden; /* Garante que fundos e bordas funcionem bem */
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .theme-header {
+            padding: 15px 25px;
+            background-color: #e9e9e9; /* Fundo neutro para o nome do tema */
+            border-bottom: 1px solid #ccc;
+        }
+
+        .theme-header h2 {
+            font-size: 1.4em;
+            font-family: 'Lato', sans-serif;
+            color: #333;
+        }
+
+        .theme-content {
+            padding: 30px 25px;
+        }
+        
+        /* --- ESTILOS DO TEMA 1: Tech Minimal Chic --- */
+        .theme-tech-minimal-chic {
+            background-color: #EFE6DD; /* Bege Suave - Fundo principal do tema */
+            color: #333;
+            font-family: 'Muli', sans-serif; /* Fonte padrão do tema */
+        }
+        
+        .theme-tech-minimal-chic .theme-title {
+            font-family: 'Oswald', sans-serif; /* Fonte Título */
+            font-weight: 700; /* Bold */
+            font-size: 2.2em; 
+            color: #2c3e50; 
+            margin-bottom: 15px;
+            border-bottom: 3px solid #C8D8E4; /* Azul Gelo como detalhe */
+            padding-bottom: 5px;
+            display: inline-block;
+        }
+
+        .theme-tech-minimal-chic .theme-subtitle {
+            font-family: 'PT Sans Narrow', sans-serif; /* Fonte Subtítulo */
+            font-weight: 700; /* Semi-Bold (usando Bold 700) */
+            font-size: 1.5em; 
+            color: #4a4a4a; 
+            margin-bottom: 15px;
+        }
+
+        .theme-tech-minimal-chic .theme-body-text {
+            font-family: 'Muli', sans-serif; /* Fonte Texto Corrido */
+            font-weight: 400; /* Regular */
+            font-size: 1em;
+            color: #555; 
+            margin-bottom: 20px;
+        }
+
+        .theme-tech-minimal-chic .theme-button {
+            display: inline-block;
+            background-color: #F5C6AA; /* Pêssego Delicado */
+            color: #FFFFFF; 
+            padding: 10px 20px;
+            font-family: 'PT Sans Narrow', sans-serif; 
+            font-weight: 700;
+            font-size: 1em;
+            text-decoration: none;
+            border-radius: 5px; 
+            transition: background-color 0.3s ease;
+            border: none;
+            cursor: pointer;
+            text-transform: uppercase;
+        }
+        .theme-tech-minimal-chic .theme-button:hover {
+            background-color: #e8b99f; 
+        }
+        
+        /* --- ESTILOS DO TEMA 2: Dev Focus Dark (Exemplo Fictício) --- */
+        .theme-dev-focus-dark {
+            background-color: #1A1A2E; /* Fundo escuro */
+            color: #EAEAEA; /* Texto claro */
+            font-family: 'Source Sans Pro', sans-serif; /* Fonte padrão do tema */
+        }
+
+        .theme-dev-focus-dark .theme-title {
+            font-family: 'Fira Code', monospace; /* Fonte Título (monoespaçada) */
+            font-weight: 700; /* Bold */
+            font-size: 2.2em; 
+            color: #00FFD1; /* Acento neon brilhante */
+            margin-bottom: 15px;
+            text-shadow: 0 0 5px rgba(0, 255, 209, 0.5);
+        }
+
+        .theme-dev-focus-dark .theme-subtitle {
+            font-family: 'Roboto Condensed', sans-serif; /* Fonte Subtítulo */
+            font-weight: 700; /* Bold */
+            font-size: 1.5em; 
+            color: #E040FB; /* Acento secundário (magenta/roxo) */
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+        }
+
+        .theme-dev-focus-dark .theme-body-text {
+            font-family: 'Source Sans Pro', sans-serif; /* Fonte Texto Corrido */
+            font-weight: 400; /* Regular */
+            font-size: 1em;
+            color: #cccccc; /* Cinza claro para texto corrido */
+            margin-bottom: 20px;
+        }
+
+        .theme-dev-focus-dark .theme-button {
+            display: inline-block;
+            background-color: #00FFD1; /* Acento principal */
+            color: #1A1A2E; /* Texto escuro no botão claro */
+            padding: 10px 20px;
+            font-family: 'Roboto Condensed', sans-serif; 
+            font-weight: 700;
+            font-size: 1em;
+            text-decoration: none;
+            border-radius: 3px; 
+            transition: all 0.3s ease;
+            border: 1px solid #00FFD1;
+            cursor: pointer;
+            text-transform: uppercase;
+        }
+        .theme-dev-focus-dark .theme-button:hover {
+            background-color: #1A1A2E;
+            color: #00FFD1; 
+            box-shadow: 0 0 10px rgba(0, 255, 209, 0.7);
+        }
+
+        /* --- ESTILOS DO TEMA 3: Green Corporate (Exemplo Fictício) --- */
+        .theme-green-corporate {
+            background-color: #F5F5DC; /* Fundo Bege Claro (quase branco) */
+            color: #5D4037; /* Marrom escuro para texto principal */
+            font-family: 'Open Sans', sans-serif; /* Fonte padrão do tema */
+        }
+
+        .theme-green-corporate .theme-title {
+            font-family: 'Merriweather', serif; /* Fonte Título (serifada) */
+            font-weight: 700; /* Bold */
+            font-size: 2.2em; 
+            color: #4CAF50; /* Verde principal */
+            margin-bottom: 15px;
+        }
+
+        .theme-green-corporate .theme-subtitle {
+            font-family: 'Lato', sans-serif; /* Fonte Subtítulo */
+            font-weight: 700; /* Bold */
+            font-size: 1.5em; 
+            color: #5D4037; /* Marrom escuro */
+            margin-bottom: 15px;
+        }
+
+        .theme-green-corporate .theme-body-text {
+            font-family: 'Open Sans', sans-serif; /* Fonte Texto Corrido */
+            font-weight: 400; /* Regular */
+            font-size: 1em;
+            color: #616161; /* Cinza escuro para corpo */
+            margin-bottom: 20px;
+        }
+
+        .theme-green-corporate .theme-button {
+            display: inline-block;
+            background-color: #4CAF50; /* Verde principal */
+            color: #FFFFFF; /* Texto branco */
+            padding: 10px 20px;
+            font-family: 'Lato', sans-serif; 
+            font-weight: 700;
+            font-size: 1em;
+            text-decoration: none;
+            border-radius: 5px; 
+            transition: background-color 0.3s ease;
+            border: none;
+            cursor: pointer;
+            text-transform: uppercase;
+        }
+        .theme-green-corporate .theme-button:hover {
+            background-color: #388E3C; /* Verde mais escuro no hover */
+        }
+
+        /* Responsividade Básica */
+        @media (max-width: 768px) {
+            .catalog-title {
+                font-size: 1.8em;
+            }
+            .theme-preview {
+                 margin-left: 15px;
+                 margin-right: 15px;
+            }
+            .theme-content {
+                 padding: 20px 15px;
+            }
+             /* Ajustar tamanhos de fonte dentro dos temas se necessário */
+            .theme-tech-minimal-chic .theme-title,
+            .theme-dev-focus-dark .theme-title,
+            .theme-green-corporate .theme-title {
+                font-size: 1.8em;
+            }
+             .theme-tech-minimal-chic .theme-subtitle,
+            .theme-dev-focus-dark .theme-subtitle,
+            .theme-green-corporate .theme-subtitle {
+                font-size: 1.3em;
+            }
+        }
+
+    </style>
 </head>
 <body>
-  <h1>Catálogo de Temas para Igor Scaglia</h1>
-  
-  <!-- Esquema #1: Aurora Digital -->
-  <div class="theme-card">
-    <div class="wp-preview" style="
-         /* Aplicando a paleta do tema Aurora Digital */
-         --header-bg: #A3D5D3;
-         --content-bg: #F7E8AA;
-         --sidebar-bg: #D9BF77;
-         font-family: 'Montserrat', sans-serif;">
-      <div class="wp-header" style="background-color: var(--header-bg); color: #333;">
-        Aurora Digital
-      </div>
-      <div class="wp-content" style="background-color: var(--content-bg); font-family: 'Open Sans', sans-serif; grid-column: 1 / 2;">
-        <article class="post">
-          <h3 style="font-family: 'Montserrat', sans-serif;">Post Exemplo 1</h3>
-          <p>Conteúdo legível e organizado, sem estresse para os olhos – ideal para mentes que codificam e inspiram.</p>
-        </article>
-        <article class="post">
-          <h3 style="font-family: 'Montserrat', sans-serif;">Post Exemplo 2</h3>
-          <p>Informações dispostas para facilitar a leitura prolongada, sem aquela agressividade visual que cansa.</p>
-        </article>
-      </div>
-      <div class="wp-sidebar" style="background-color: var(--sidebar-bg); font-family: 'Lato', sans-serif; grid-column: 2 / 3;">
-        <h4>Sidebar</h4>
-        <ul style="list-style: none; padding: 0;">
-          <li><a href="#" style="color: inherit; text-decoration: none;">Link 1</a></li>
-          <li><a href="#" style="color: inherit; text-decoration: none;">Link 2</a></li>
-          <li><a href="#" style="color: inherit; text-decoration: none;">Link 3</a></li>
-        </ul>
-      </div>
-      <div class="wp-footer" style="background-color: var(--header-bg); color: #333;">
-        Footer: Navegação discreta e moderna
-      </div>
-    </div>
-    <div class="theme-info">
-      <h2>Aurora Digital</h2>
-      <p><strong>Paleta de Cores:</strong> #A3D5D3, #F7E8AA, #D9BF77</p>
-      <p><strong>Fontes Sugeridas:</strong><br>
-         Título: Montserrat Bold, Subtítulo: Lato Semi-Bold, Texto Corrido: Open Sans Regular</p>
-      <p><strong>Influência Artística:</strong> Futurismo Pastel</p>
-      <p><strong>Por que poupa os olhos:</strong> A harmonia sutil entre os tons evita cansaço visual, mesmo em longas sessões de leitura.</p>
-      <p><strong>Observações / Regras:</strong> Modernidade e sofisticação sem exageros.</p>
-    </div>
-  </div>
-  
-  <!-- Esquema #2: Retro Circuit -->
-  <div class="theme-card">
-    <div class="wp-preview" style="
-         /* Paleta do Retro Circuit */
-         --header-bg: #B0C4B1;
-         --content-bg: #F5E1A4;
-         --sidebar-bg: #CEB8A8;
-         font-family: 'Raleway', sans-serif;">
-      <div class="wp-header" style="background-color: var(--header-bg); color: #333;">
-        Retro Circuit
-      </div>
-      <div class="wp-content" style="background-color: var(--content-bg); font-family: 'Nunito Sans', sans-serif; grid-column: 1 / 2;">
-        <article class="post">
-          <h3 style="font-family: 'Raleway', sans-serif;">Post Exemplo A</h3>
-          <p>Layout inspirado na Bauhaus Vintage: simplicidade geométrica sem aborrecimentos visuais.</p>
-        </article>
-        <article class="post">
-          <h3 style="font-family: 'Raleway', sans-serif;">Post Exemplo B</h3>
-          <p>Confortável, nostálgico e organizado para proporcionar uma experiência de leitura fluida.</p>
-        </article>
-      </div>
-      <div class="wp-sidebar" style="background-color: var(--sidebar-bg); font-family: 'Roboto', sans-serif; grid-column: 2 / 3;">
-        <h4>Sidebar</h4>
-        <ul style="list-style: none; padding: 0;">
-          <li><a href="#" style="color: inherit; text-decoration: none;">Menu 1</a></li>
-          <li><a href="#" style="color: inherit; text-decoration: none;">Menu 2</a></li>
-          <li><a href="#" style="color: inherit; text-decoration: none;">Menu 3</a></li>
-        </ul>
-      </div>
-      <div class="wp-footer" style="background-color: var(--header-bg); color: #333;">
-        Footer: Equilíbrio entre o retrô e o moderno
-      </div>
-    </div>
-    <div class="theme-info">
-      <h2>Retro Circuit</h2>
-      <p><strong>Paleta de Cores:</strong> #B0C4B1, #F5E1A4, #CEB8A8</p>
-      <p><strong>Fontes Sugeridas:</strong><br>
-         Título: Raleway ExtraBold, Subtítulo: Roboto Medium, Texto Corrido: Nunito Sans Regular</p>
-      <p><strong>Influência Artística:</strong> Bauhaus Vintage</p>
-      <p><strong>Por que poupa os olhos:</strong> O equilíbrio de tons suaves facilita a leitura, mantendo um clima nostálgico sem exageros.</p>
-      <p><strong>Observações / Regras:</strong> Cuidado para não exagerar no retrô nem no ultra moderno – equilíbrio é tudo.</p>
-    </div>
-  </div>
-  
-  <!-- Esquema #3: Neon Poético -->
-  <div class="theme-card">
-    <div class="wp-preview" style="
-         /* Paleta do Neon Poético */
-         --header-bg: #E3DFFD;
-         --content-bg: #FDE2E4;
-         --sidebar-bg: #C1E1DC;
-         font-family: 'Poppins', sans-serif;">
-      <div class="wp-header" style="background-color: var(--header-bg); color: #333;">
-        Neon Poético
-      </div>
-      <div class="wp-content" style="background-color: var(--content-bg); font-family: 'Source Sans Pro', sans-serif; grid-column: 1 / 2;">
-        <article class="post">
-          <h3 style="font-family: 'Poppins', sans-serif;">Post Sonhador 1</h3>
-          <p>Um design que mistura elegância e lirismo, mantendo a clareza sem encher os olhos de neón.</p>
-        </article>
-        <article class="post">
-          <h3 style="font-family: 'Poppins', sans-serif;">Post Sonhador 2</h3>
-          <p>Ideal para leitores que buscam inspiração e tranquilidade em cada parágrafo.</p>
-        </article>
-      </div>
-      <div class="wp-sidebar" style="background-color: var(--sidebar-bg); font-family: 'Poppins', sans-serif; grid-column: 2 / 3;">
-        <h4>Sidebar</h4>
-        <ul style="list-style: none; padding: 0;">
-          <li><a href="#" style="color: inherit; text-decoration: none;">Inspiração</a></li>
-          <li><a href="#" style="color: inherit; text-decoration: none;">Contato</a></li>
-          <li><a href="#" style="color: inherit; text-decoration: none;">Sobre</a></li>
-        </ul>
-      </div>
-      <div class="wp-footer" style="background-color: var(--header-bg); color: #333;">
-        Footer: Elegância que não cansa
-      </div>
-    </div>
-    <div class="theme-info">
-      <h2>Neon Poético</h2>
-      <p><strong>Paleta de Cores:</strong> #E3DFFD, #FDE2E4, #C1E1DC</p>
-      <p><strong>Fontes Sugeridas:</strong><br>
-         Título e Subtítulo: Poppins Bold / Semi-Bold, Texto Corrido: Source Sans Pro Regular</p>
-      <p><strong>Influência Artística:</strong> Art Nouveau Contemporâneo</p>
-      <p><strong>Por que poupa os olhos:</strong> Pastéis que proporcionam um fundo leve, dando primazia ao conteúdo sem causar fadiga visual.</p>
-      <p><strong>Observações / Regras:</strong> Cuidado para manter o equilíbrio entre o sonhador e o prático.</p>
-    </div>
-  </div>
-  
-  <!-- Esquema #4: Sutileza Analógica -->
-  <div class="theme-card">
-    <div class="wp-preview" style="
-         /* Paleta do Sutileza Analógica */
-         --header-bg: #DDE0C8;
-         --content-bg: #F4F1BB;
-         --sidebar-bg: #B1A7A6;
-         font-family: 'Merriweather', serif;">
-      <div class="wp-header" style="background-color: var(--header-bg); color: #333;">
-        Sutileza Analógica
-      </div>
-      <div class="wp-content" style="background-color: var(--content-bg); font-family: 'Lora', serif; grid-column: 1 / 2;">
-        <article class="post">
-          <h3 style="font-family: 'Merriweather', serif;">Post Clássico 1</h3>
-          <p>Design impressionista que valoriza a sutileza dos detalhes, para uma leitura sem cansaço.</p>
-        </article>
-        <article class="post">
-          <h3 style="font-family: 'Merriweather', serif;">Post Clássico 2</h3>
-          <p>Com um fundo suave e contrastes bem calculados, tudo se torna mais agradável aos olhos.</p>
-        </article>
-      </div>
-      <div class="wp-sidebar" style="background-color: var(--sidebar-bg); font-family: 'Merriweather Sans', sans-serif; grid-column: 2 / 3;">
-        <h4>Sidebar</h4>
-        <ul style="list-style: none; padding: 0;">
-          <li><a href="#" style="color: inherit; text-decoration: none;">Arquivo</a></li>
-          <li><a href="#" style="color: inherit; text-decoration: none;">Categorias</a></li>
-          <li><a href="#" style="color: inherit; text-decoration: none;">Contatos</a></li>
-        </ul>
-      </div>
-      <div class="wp-footer" style="background-color: var(--header-bg); color: #333;">
-        Footer: Harmonia e equilíbrio
-      </div>
-    </div>
-    <div class="theme-info">
-      <h2>Sutileza Analógica</h2>
-      <p><strong>Paleta de Cores:</strong> #DDE0C8, #F4F1BB, #B1A7A6</p>
-      <p><strong>Fontes Sugeridas:</strong><br>
-         Título: Merriweather Bold, Subtítulo: Merriweather Sans Medium, Texto Corrido: Lora Regular</p>
-      <p><strong>Influência Artística:</strong> Pintura Impressionista</p>
-      <p><strong>Por que poupa os olhos:</strong> Combinações pensadas para reduzir a fadiga ocular sem comprometer a legibilidade.</p>
-      <p><strong>Observações / Regras:</strong> Um design que equilibra tradição e modernidade, perfeito para longas leituras.</p>
-    </div>
-  </div>
-  
-  <!-- Esquema #5: Tech Minimal Chic -->
-  <div class="theme-card">
-    <div class="wp-preview" style="
-         /* Paleta do Tech Minimal Chic */
-         --header-bg: #C8D8E4;
-         --content-bg: #EFE6DD;
-         --sidebar-bg: #F5C6AA;
-         font-family: 'Oswald', sans-serif;">
-      <div class="wp-header" style="background-color: var(--header-bg); color: #333;">
-        Tech Minimal Chic
-      </div>
-      <div class="wp-content" style="background-color: var(--content-bg); font-family: 'Muli', sans-serif; grid-column: 1 / 2;">
-        <article class="post">
-          <h3 style="font-family: 'Oswald', sans-serif;">Post Moderno 1</h3>
-          <p>Um layout que alia tecnologia com um toque humano, mantendo a leitura confortável e organizada.</p>
-        </article>
-        <article class="post">
-          <h3 style="font-family: 'Oswald', sans-serif;">Post Moderno 2</h3>
-          <p>Estrutura minimalista com charme para destacar o conteúdo sem cansar a visão.</p>
-        </article>
-      </div>
-      <div class="wp-sidebar" style="background-color: var(--sidebar-bg); font-family: 'PT Sans Narrow', sans-serif; grid-column: 2 / 3;">
-        <h4>Sidebar</h4>
-        <ul style="list-style: none; padding: 0;">
-          <li><a href="#" style="color: inherit; text-decoration: none;">Início</a></li>
-          <li><a href="#" style="color: inherit; text-decoration: none;">Sobre</a></li>
-          <li><a href="#" style="color: inherit; text-decoration: none;">Contato</a></li>
-        </ul>
-      </div>
-      <div class="wp-footer" style="background-color: var(--header-bg); color: #333;">
-        Footer: Minimal, mas com estilo
-      </div>
-    </div>
-    <div class="theme-info">
-      <h2>Tech Minimal Chic</h2>
-      <p><strong>Paleta de Cores:</strong> #C8D8E4, #EFE6DD, #F5C6AA</p>
-      <p><strong>Fontes Sugeridas:</strong><br>
-         Título: Oswald Bold, Subtítulo: PT Sans Narrow Semi-Bold, Texto Corrido: Muli Regular</p>
-      <p><strong>Influência Artística:</strong> Modernismo Orgânico</p>
-      <p><strong>Por que poupa os olhos:</strong> Design pensado para oferecer conforto visual, permitindo que o conteúdo seja absorvido sem esforço.</p>
-      <p><strong>Observações / Regras:</strong> Combina rigor técnico com uma estética acolhedora e diferenciada.</p>
-    </div>
-  </div>
-  
-  <footer style="text-align: center; margin-top: 40px; font-size: 0.9em; color: #777;">
-    Catálogo de Temas para Igor Scaglia — Inspiração e conforto visual com personalidade.
-  </footer>
+
+    <h1 class="catalog-title">Catálogo de Temas Visuais</h1>
+
+    <section class="theme-preview theme-tech-minimal-chic">
+        <header class="theme-header">
+            <h2>Tema: Tech Minimal Chic</h2>
+        </header>
+        <div class="theme-content">
+            <h3 class="theme-title">Inovação com Toque Humano</h3>
+            <h4 class="theme-subtitle">Modernismo Orgânico Aplicado</h4>
+            <p class="theme-body-text">
+                Este design utiliza uma paleta de cores (#C8D8E4, #EFE6DD, #F5C6AA) e fontes (Oswald, PT Sans Narrow, Muli) para criar um ambiente visualmente repousante, equilibrando tecnologia e humanidade. Ideal para apresentar conteúdo denso de forma clara e agradável.
+            </p>
+            <button class="theme-button">Saiba Mais</button>
+        </div>
+    </section>
+
+    <section class="theme-preview theme-dev-focus-dark">
+        <header class="theme-header">
+            <h2>Tema: Dev Focus Dark</h2>
+        </header>
+        <div class="theme-content">
+            <h3 class="theme-title">Código na Penumbra</h3>
+            <h4 class="theme-subtitle">Alto Contraste para Desenvolvedores</h4>
+            <p class="theme-body-text">
+                Um tema escuro (#1A1A2E) com acentos vibrantes (#00FFD1, #E040FB) e fontes focadas em código (Fira Code, Roboto Condensed, Source Sans Pro). Projetado para longas sessões de trabalho, minimizando o cansaço visual e destacando elementos importantes.
+            </p>
+            <button class="theme-button">Explorar API</button>
+        </div>
+    </section>
+
+    <section class="theme-preview theme-green-corporate">
+        <header class="theme-header">
+            <h2>Tema: Green Corporate</h2>
+        </header>
+        <div class="theme-content">
+            <h3 class="theme-title">Sustentabilidade e Clareza</h3>
+            <h4 class="theme-subtitle">Profissionalismo com Consciência</h4>
+            <p class="theme-body-text">
+                Combina tons terrosos e verdes (#4CAF50, #F5F5DC, #5D4037) com fontes clássicas e legíveis (Merriweather, Lato, Open Sans). Ideal para empresas que querem comunicar confiança, crescimento sustentável e profissionalismo de forma limpa e acessível.
+            </p>
+            <button class="theme-button">Ver Relatório</button>
+        </div>
+    </section>
+
 </body>
 </html>
